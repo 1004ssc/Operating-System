@@ -1,0 +1,84 @@
+CSEG
+mov cl, 32h
+lea dx,char1
+int 224
+
+mov cl, 32h
+lea dx,char2
+int 224
+
+mov cl, 32h
+lea dx,char3
+int 224
+
+mov cl, 32h
+lea dx,char4
+int 224
+
+mov cl, 32h
+lea dx,char5
+int 224
+
+mov cl, 32h
+lea dx,char6
+int 224
+
+mov cl, 32h
+lea dx,char7
+int 224
+
+mov cl, 32h
+lea dx,char8
+int 224
+
+mov cl, 32h
+lea dx,char9
+int 224
+
+mov cl, 32h
+lea dx,char10
+int 224
+
+
+mov cl, 32h
+lea dx,readchar
+int 224
+
+sub al,'0'
+add al,al
+add al,'0'
+
+mov bx,1
+mov writechar[bx],al
+
+
+
+mov cl,32h
+lea dx,writechar
+int 224
+
+
+
+mov cl, 00h
+int 224
+
+
+DSEG
+org 100h
+char1  db   4h,'E',0,0,0
+char2  db   4h,'N',0,0,0
+char3  db   4h,'T',0,0,0
+char4  db   4h,'E',0,0,0
+char5  db   4h,'R',0,0,0
+char6  db   4h,'0',0,0,0
+char7  db   4h,'-',0,0,0
+char8  db   4h,'4',0,0,0
+char9  db   4h,':',0,0,0
+char10  db   4h,' ',0,0,0
+
+readchar db 3h,0,0,0,0
+writechar db 4h,0,0,0,0
+
+
+end
+
